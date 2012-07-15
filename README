@@ -1,0 +1,65 @@
+
+Map Explorer Open
+Open source code for Map Explorer mobile app
+(C) 2012 by Mapocosm. All rights reserved.
+http://www.mapocosm.com/
+
+Introduction and licensing
+--------------------------
+Map Explorer is a mobile app for exploring custom maps, i.e. those that are 
+not available from the standard Google "Maps" mobile app. Many websites and 
+tools that produce KML files, including Google My Places, can be used to 
+create custom maps that can be explored and shared with Map Explorer.
+
+In addition to supporting maps, Map Explorer Open presents about 4k lines of
+commerical-quality Javascript that can be used as the source code foundation 
+for a wide variety of applications. Some of the principles embodied include:
+ * Javascript modular CommonJS design, memory management, and style sheets
+ * cross-platform UI with title bar, menu pulldown, and various dialogs
+ * http file download queueing and management
+ * query to REST web services and JSON response handling
+ * XML file parsing
+ * Android intent filters and invoking external apps
+ * integrated web browser and image viewer objects
+ * communication between web objects and javascript program
+ * wide range of string handling, checksums, html decoding, ...
+ * application setting parameters and persistence 
+ * location-based services
+ * web searching and formatting html results
+
+Map Explorer Open is distributed under terms of the MIT License:
+http://opensource.org/licenses/mit-license.php/
+
+Map Explorer was written and published by David Asher.
+http://www.linkedin.com/in/davidasher
+https://twitter.com/asherdavid
+
+
+Building and distributing apps
+------------------------------
+Map Explorer Open is written in Javascript using Appcelerator Titanium. 
+http://www.appcelerator.com/
+
+!! If you intend to build and distribute commercial applications based on this
+open source code, YOU MUST change these application-specific parameters:
+name, id, publisher, appid, guid, appname. These are found in the files
+tiapp.xml, manifest, and AndroidManifest.xml.
+
+The file app.js is the main program and has key architectural notes. To build 
+and modify Map Explorer Open, you should create a new Titanium Mobile Project 
+in Titanium Studio, which will provide a new unique app GUID, then transfer 
+the source code files and merge tiapp.xml and AndroidManifest.xml values.
+
+In order to build an app that allows web searching and location services, the
+Googleness.js module must be updated for your vendor-specific Google API keys.
+When ready to sign a production app for distribution, a vendor-specific Google 
+Maps API key in file tiapp.xml must be updated. See Googleness.js for details.
+
+
+Platforms: Tested on Android; adapting for iOS
+----------------------------------------------
+Map Explorer Open has been built and tested with Google Android 2.2, 2.3,
+and 4.0. The source code is highly portable to Apple iPhone and iPad devices 
+but must be adapted and tested for iOS. Some settings in tiapp.xml (such as 
+<target>) must be updated for iOS; also see the Android/iOS notes in app.js.
+

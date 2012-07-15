@@ -1,0 +1,89 @@
+ol.results { 
+	list-style:decimal outside; 
+	border-top:2px solid darkgray; 
+	margin-top:4px; 
+	margin-bottom:4px; 
+	padding-left:36px; 
+}
+ul.results { 
+	border-top:2px solid navy; 
+}
+li.toshow { 
+	padding:6px 0px; 
+	margin:2px 0px; 
+	border-bottom:1px dotted navy;
+}
+.title { 
+	padding:0;
+	margin:6px 0px; 
+	font-size:xx-large;
+	color:navy; 
+}
+.subtitle { 
+	padding:0px; 
+}
+.smallheader {
+	padding:0;
+	margin:3px 0px; 
+	color:navy; 
+	font-style:bold;
+}
+.comment { 
+	font-size:small; 
+	margin-top:6px; 
+}
+.minor { 
+	font-size:xx-small;
+	font-style:italic;
+	padding:6px;
+}
+.shaded {
+	background-color:#97A6B9;
+	padding:4px;
+	margin-bottom:4px;
+	font-size:large;
+	color:white;
+	vertical-align:middle;
+}
+button.text {
+	margin:5px;
+	font-size:x-small;
+	border-radius:8px;
+	border:2px solid darkgrey;
+	background-color:lightgray;
+}
+dt.listing {
+	margin:0px;
+	padding:0 0 4px 4px;
+	font-size:larger;
+	font-weight:bold;
+	color:#3366CC;
+}
+dd.sublisting {
+	margin:0px 2em;
+	padding:0 0 4px 0;
+	font-size:smaller;
+}
+dd.sublisting_minor {
+	margin:0px;
+	padding:0 0 4px 4px;
+	font-size:smaller;
+	font-style:italic;
+}
+dl.listing {
+	padding:0px;
+	margin:0px;
+}
+.button {
+	font-size:small;
+	border:1px outset;
+	border-radius:4px;
+	background-color:#ccc;
+	margin:6px 8px 6px 0px; 
+	padding:4px 8px;
+}
+img.smallpic {
+	width:108px;
+	margin:4px 8px 8px 0;
+	float:left;
+}

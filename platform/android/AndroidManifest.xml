@@ -1,0 +1,82 @@
+<?xml version="1.0" ?><manifest android:installLocation="preferExternal" android:versionCode="3" android:versionName="1.3" package="com.mapocosm.mapexplorer.open" xmlns:android="http://schemas.android.com/apk/res/android">
+	<uses-sdk android:minSdkVersion="8"/>
+
+	<!-- TI_MANIFEST -->
+
+	<application android:debuggable="false" android:icon="@drawable/appicon" android:label="Map Explorer Open" android:name="MapExplorerOpenApplication">
+
+		<!-- TI_APPLICATION -->
+
+		<activity android:configChanges="keyboardHidden|orientation" android:label="Map Explorer Open" android:name=".MapExplorerOpenActivity" android:theme="@style/Theme.Titanium">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN"/>
+				<category android:name="android.intent.category.LAUNCHER"/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http"  android:host="maps.google.com" android:pathPattern="/maps/ms.*"/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="https" android:host="maps.google.com" android:pathPattern="/maps/ms.*"/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="https" android:host="picasaweb.google.com"/>
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="http"  android:host="*" android:pathPattern=".*\\.kml" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="https" android:host="*" android:pathPattern=".*\\.kml" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:scheme="file"  android:host="*" android:pathPattern=".*\\.kml" />
+			</intent-filter>
+			<intent-filter>
+				<action android:name="android.intent.action.VIEW" />
+				<category android:name="android.intent.category.DEFAULT" />
+				<category android:name="android.intent.category.BROWSABLE" />
+				<data android:mimeType="application/vnd.google-earth.kml+xml"/>
+			</intent-filter>
+		</activity>
+
+		<activity android:configChanges="keyboardHidden|orientation" android:launchMode="singleTask" android:name="ti.modules.titanium.map.TiMapActivity"/>
+	<uses-library android:name="com.google.android.maps"/>
+
+		<activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiActivity"/>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiTranslucentActivity" android:theme="@android:style/Theme.Translucent"/>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="org.appcelerator.titanium.TiModalActivity" android:theme="@android:style/Theme.Translucent"/>
+		<activity android:configChanges="keyboardHidden|orientation" android:name="ti.modules.titanium.ui.TiTabActivity"/>
+		<activity android:name="ti.modules.titanium.ui.android.TiPreferencesActivity"/>
+
+		<service android:exported="false" android:name="org.appcelerator.titanium.analytics.TiAnalyticsService"/>
+		
+
+	</application>
+
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	
+
+</manifest>
